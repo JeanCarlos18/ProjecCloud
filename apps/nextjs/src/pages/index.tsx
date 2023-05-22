@@ -14,7 +14,7 @@ const PostCard: React.FC<{
       <h2 className="text-2xl font-bold text-[hsl(280,100%,70%)]">
         {post.name}
       </h2>
-      <p>{post.price}</p>
+      <p>$ {post.price}</p>
     </div>
   );
 };
