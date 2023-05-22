@@ -8,9 +8,4 @@ export const productRouter = router({
   byId: publicProcedure.input(z.string()).query(({ ctx, input }) => {
     return ctx.prisma.product.findFirst({ where: { id: input } });
   }),
-  create: protectedProcedure
-    .input(z.object({ title: z.string(), content: z.string() }))
-    .mutation(({ ctx, input }) => {
-      return ctx.prisma.product.create({ data: input });
-    }),
 });

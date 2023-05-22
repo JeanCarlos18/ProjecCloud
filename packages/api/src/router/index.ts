@@ -1,9 +1,9 @@
 import { router } from "../trpc";
-import { postRouter } from "./post";
+import { productRouter } from "./product";
 import { authRouter } from "./auth";
 
 export const appRouter = router({
-  post: postRouter,
+  product: productRouter,
   auth: authRouter,
 });
 
