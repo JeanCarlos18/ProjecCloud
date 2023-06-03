@@ -13,7 +13,7 @@ export function NavBar() {
             alt="Flowbite Logo"
           />
           <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-            Flowbite
+            🚲 BiciLand
           </span>
         </a>
         <button
@@ -80,7 +80,6 @@ export function NavBar() {
                   href="/sign-in"
                   className="block rounded py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
                 >
-                  Sign in
                   <SignInButton>
                     <span className="text-white">Sign in</span>
                   </SignInButton>
