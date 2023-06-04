@@ -11,13 +11,22 @@ datasource db {
 }
 
 model User {
-    id String @id @default(cuid())
-    name String
+    id int ,
+    bici int ,
+    name String, 
     email String
 }
 
 model Product {
-    id String @id @default(cuid())
-    name String
+    tienda Tienda
     price Float
+}
+model Tienda {
+    user User
+    ubicacion String,
+    name String
+}
+model Grua {
+    tienda Tienda  
+    name 
 }
