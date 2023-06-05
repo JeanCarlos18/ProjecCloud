@@ -57,10 +57,41 @@ const NewItemForm = () => {
     }),
 
     // Submit form
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: async (values) => {
+      const privateMetadata = {
+        customField: "Custom value",
+        anotherField: 123,
+      };
+
+      try {
+        // Send form values and private metadata to the server
+        const response = await fetch("/api/create-item", {
+          method: "POST",
+          body: JSON.stringify({
+            ...values,
+            privateMetadata,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        // Handle the response from the server
+        if (response.ok) {
+          console.log("Item created successfully");
+          // Perform any additional actions or show success message
+        } else {
+          console.log("Item creation failed");
+          // Handle error response from the server
+        }
+      } catch (error) {
+        console.log("An error occurred", error);
+        // Handle network or other errors
+      }
     },
   });
+
+  // ...
 
   return (
     <form
